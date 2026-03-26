@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Dominion Onoja">
+  <meta name="description" content="Multi-step form Built with HTML, CSS, JS and Tailwind.">
+  <meta property="og:title" content="Frontend Mentor | Multi-step form">
+  <meta property="og:description" content="Multi-step form Built with HTML, CSS, JS and Tailwind">
+  <meta property="og:url" content="https://yourwebsite.com/job-listings">
+  <meta property="og:site_name" content="Multi-step form">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+
+<body class="app bg-(--blue-2) min-h-screen relative md:flex md:flex-col md:items-center md:justify-center">
+
+  <div class="layout md:bg-(--white) md:grid md:grid-cols-[minmax(0,272px)_1fr] md:w-1296/1440 md:max-w-235 pbe-20 md:p-4 md:rounded-xl md:shadow-2xl">
+    <!-- Sidebar start -->
+    <header class="sidebar bg-[url(./assets/images/bg-sidebar-mobile.svg)] bg-cover md:bg-[url(assets/images/bg-sidebar-desktop.svg)] bg-no-repeat min-h-43 py-8 md:px-8 md:py-10 md:rounded-lg">
+      <nav class="step-nav">
+        <ul class="step-list flex justify-between md:flex-col md:gap-8 w-180/375 md:w-max m-auto md:m-0">
+          <li class="step-item step-item--active md:flex md:items-center md:gap-4 cursor-pointer" aria-current="step" data-index="1">
+            <span class="step-number block px-3 place-content-center aspect-square border border-(--white) rounded-full font-(family-name:--ff-sans) font-medium text-(--white) transition duration-300">1</span>
+            <div class="step-text hidden md:block">
+              <span class="step-label block font-(family-name:--ff-sans) font-normal text-(--purple-1)">Step 1</span>
+              <span class="step-title block font-(family-name:--ff-sans) font-medium text-(--white)">Your info</span>
+            </div>
+          </li>
+
+          <li class="step-item md:flex md:items-center md:gap-4 cursor-pointer" data-index="2">
+            <span class="step-number block px-3 place-content-center aspect-square border border-(--white) rounded-full font-(family-name:--ff-sans) font-medium text-(--white) transition duration-300">2</span>
+            <div class="step-text hidden md:block">
+              <span class="step-label block font-(family-name:--ff-sans) font-normal text-(--purple-1)">Step 2</span>
+              <span class="step-title block font-(family-name:--ff-sans) font-medium text-(--white)">Select plan</span>
+            </div>
+          </li>
+
+          <li class="step-item md:flex md:items-center md:gap-4 cursor-pointer" data-index="3">
+            <span class="step-number block px-3 place-content-center aspect-square border border-(--white) rounded-full font-(family-name:--ff-sans) font-medium text-(--white) transition duration-300">3</span>
+            <div class="step-text hidden md:block">
+              <span class="step-label block font-(family-name:--ff-sans) font-normal text-(--purple-1)">Step 3</span>
+              <span class="step-title block font-(family-name:--ff-sans) font-medium text-(--white)">Add-ons</span>
+            </div>
+          </li>
+          
+          <li class="step-item md:flex md:items-center md:gap-4 cursor-pointer" data-index="4">
+            <span class="step-number block px-3 place-content-center aspect-square border border-(--white) rounded-full font-(family-name:--ff-sans) font-medium text-(--white) transition duration-300">4</span>
+            <div class="step-text hidden md:block">
+              <span class="step-label block font-(family-name:--ff-sans) font-normal text-(--purple-1)">Step 4</span>
+              <span class="step-title block font-(family-name:--ff-sans) font-medium text-(--white)">Summary</span>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Sidebar end -->
+
+    <main class="main-content bg-(--white) w-342/375 max-w-xl md:w-full md:max-w-full mx-auto -mbs-18.25 mbe-7 md:m-0 px-6 py-8 md:px-10 lg:px-25 lg:py-11 rounded-lg md:rounded-none shadow-xl md:shadow-none">
+      <h1 class="sr-only">Multi-step Form Homepage</h1>
+
+      <form id="form">
+        <!-- Step 1 start -->
+        <section id="step-1" class="form-step md:min-h-95 lg:min-h-115 transition duration-300" data-index="1">
+          <div>
+            <div>
+              <h2 class="font-(family-name:--ff-sans) font-bold text-2xl text-(--blue-5)">Personal info</h2>
+              <p class="font-(family-name:--ff-sans) font-normal text-base text-(--grey) py-3.5 md:pbe-9">Please provide your name, email address, and phone number.</p>
+            </div>
+            <div class="flex flex-col gap-2.25">
+              <div class="form-group">
+                <div class="flex mbe-2">
+                  <label for="name" class="font-(family-name:--ff-sans) font-normal text-base text-(--blue-5)">Name</label>
+                </div>
+                <input id="name" class="form-input w-full px-4 py-1.75 block border rounded-sm border-(--grey) hover:border-(--purple-2) focus:outline-(--purple-2) font-(family-name:--ff-sans) font-normal text-base text-(--grey) transition-colors duration-300 ease-linear cursor-pointer" type="text" placeholder="e.g. Stephen King" required>
+              </div>
+              <div class="form-group">
+                <div class="flex mbe-2">
+                  <label for="email" class="font-(family-name:--ff-sans) font-normal text-base text-(--blue-5) block">Email Address</label>
+                </div>
+                <input id="email" class="form-input w-full px-4 py-1.75 border rounded-sm border-(--grey) hover:border-(--purple-2) focus:outline-(--purple-2) font-(family-name:--ff-sans) font-normal text-base text-(--grey) transition-colors duration-300 ease-linear cursor-pointer" type="email" placeholder="e.g. stephenking@lorem.com" required>
+              </div>
+              <div class="form-group">
+                <div class="flex mbe-2">
+                  <label for="tel" class="font-(family-name:--ff-sans) font-normal text-base text-(--blue-5) block">Phone Number</label>
+                </div>
+                <input id="tel" class="form-input w-full px-4 py-1.75 border rounded-sm border-(--grey) hover:border-(--purple-2) focus:outline-(--purple-2) font-(family-name:--ff-sans) font-normal text-base text-(--grey) transition-colors duration-300 ease-linear cursor-pointer" type="tel" placeholder="e.g. +1 234 567 890" required>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Step 1 end -->
+
+        <!-- Step 2 start -->
+        <section id="step-2" class="form-step md:min-h-95 lg:min-h-115 transition duration-300" data-index="2" hidden>
+          <fieldset>
+            <div>
+              <legend class="font-(family-name:--ff-sans) font-bold text-2xl text-(--blue-5)">Select your plan</legend>
+              <p class="font-(family-name:--ff-sans) font-normal text-base text-(--grey) py-3.5 md:pbe-9">You have the option of monthly or yearly billing.</p>
+            </div>
+            <div class="step-2-content">
+              <div class="grid md:grid-cols-3 gap-3 md:gap-4.5">
+                <label class="plan-card flex md:flex-col md:items-start gap-3.5 md:gap-11 w-full px-3.75 py-4 border rounded-lg border-(--grey) hover:border-(--purple-2) font-(family-name:--ff-sans) font-normal text-base text-(--grey) cursor-pointer">
+                  <input type="radio" name="plan" value="arcade" class="plan-card__input hidden">
+                  <img class="plan-card__icon" src="./assets/images/icon-arcade.svg" alt="">
+                  <div class="plan-card__info">
+                    <h3 class="plan-card__title font-bold text-(--blue-5)">Arcade</h3>
+                    <span class="plan-card__price font-normal text-base text-(--grey)">$<span class="price">9</span>/mo</span>
+                  </div>
+                </label>
+                <label class="plan-card flex md:flex-col md:items-start gap-3.5 md:gap-11 w-full px-3.75 py-4 border rounded-lg border-(--grey) hover:border-(--purple-2) font-(family-name:--ff-sans) font-normal text-base text-(--grey) cursor-pointer">
+                  <input type="radio" name="plan" value="advanced" class="plan-card__input hidden">
+                  <img class="plan-card__icon" src="./assets/images/icon-advanced.svg" alt="">
+                  <div class="plan-card__info">
+                    <h3 class="plan-card__title font-bold text-(--blue-5)">Advanced</h3>
+                    <span class="plan-card__price font-normal text-base text-(--grey)">$<span class="price">12</span>/mo</span>
+                  </div>
+                </label>
+                <label class="plan-card flex md:flex-col md:items-start gap-3.5 md:gap-11 w-full px-3.75 py-4 border rounded-lg border-(--grey) hover:border-(--purple-2) font-(family-name:--ff-sans) font-normal text-base text-(--grey) cursor-pointer">
+                  <input type="radio" name="plan" value="pro" class="plan-card__input hidden">
+                  <img class="plan-card__icon" src="./assets/images/icon-pro.svg" alt="">
+                  <div class="plan-card__info">
+                    <h3 class="plan-card__title font-bold text-(--blue-5)">Pro</h3>
+                    <span class="plan-card__price font-normal text-base text-(--grey)">$<span class="price">15</span>/mo</span>
+                  </div>
+                </label>
+
+                <div class="billing-toggle bg-(--blue-1) col-span-full flex mbs-3 py-3">
+                  <div class="flex gap-6 justify-center mx-auto">
+                    <label class="cursor-pointer">
+                      <input type="radio" name="billing" value="monthly" class="sr-only peer" checked>
+                      <span class="text-(--grey) font-bold peer-checked:text-(--blue-5) transition">Monthly</span>
+                    </label>
+                    <div class="toggle-track relative w-10 h-5 bg-(--blue-5) rounded-full">
+                      <div id="toggle-thumb" class="absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full transition duration-300"></div>
+                    </div>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="billing" value="yearly" class="sr-only peer">
+                      <span class="text-(--grey) font-bold peer-checked:text-(--blue-5) transition">Yearly</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </section>
+        <!-- Step 2 end -->
+
+        <!-- Step 3 start -->
+        <section id="step-3" class="form-step md:min-h-95 lg:min-h-115 transition duration-300" data-index="3" hidden>
+          <fieldset>
+            <div>
+              <legend class="font-(family-name:--ff-sans) font-bold text-2xl text-(--blue-5)">Pick add-ons</legend>
+              <p class="font-(family-name:--ff-sans) font-normal text-base text-(--grey) py-3.5 md:pbe-9">Add-ons help enhance your gaming experience.</p>
+            </div>
+            <div>
+              <div class="flex flex-col gap-3 md:gap-4">
+                <label class="addon flex items-center border border-(--grey) hover:border-(--purple-2) rounded-lg p-3.75 cursor-pointer">
+                  <input type="checkbox" class="addon__input accent-(--purple-2) w-5 aspect-square rounded-sm">
+                  <div class="addon__info ml-4">
+                    <h3 class="addon__title font-(family-name:--ff-sans) font-bold text-sm md:text-base text-(--blue-5)">Online service</h3>
+                    <p class="addon__desc font-(family-name:--ff-sans) font-normal text-xs md:text-base text-(--grey)">Access to multiplayer games</p>
+                  </div>
+                  <span class="addon__price ml-auto font-(family-name:--ff-sans) font-normal text-(--purple-2)">+$<span>1</span>/mo</span>
+                </label>
+                <label class="addon flex items-center border border-(--grey) hover:border-(--purple-2) rounded-lg p-3.75 cursor-pointer">
+                  <input type="checkbox" class="addon__input accent-(--purple-2) w-5 aspect-square rounded-sm">
+                  <div class="addon__info ml-4">
+                    <h3 class="addon__title font-(family-name:--ff-sans) font-bold text-sm md:text-base text-(--blue-5)">Larger storage</h3>
+                    <p class="addon__desc font-(family-name:--ff-sans) font-normal text-xs md:text-base text-(--grey)">Extra 1TB of cloud save</p>
+                  </div>
+                  <span class="addon__price ml-auto font-(family-name:--ff-sans) font-normal text-(--purple-2)">+$<span>2</span>/mo</span>
+                </label>
+                <label class="addon flex items-center border border-(--grey) hover:border-(--purple-2) rounded-lg p-3.75 cursor-pointer">
+                  <input type="checkbox" class="addon__input accent-(--purple-2) w-5 aspect-square rounded-sm">
+                  <div class="addon__info ml-4">
+                    <h3 class="addon__title font-(family-name:--ff-sans) font-bold text-sm md:text-base text-(--blue-5)">Customizable Profile</h3>
+                    <p class="addon__desc font-(family-name:--ff-sans) font-normal text-xs md:text-base text-(--grey)">Custom theme on your profile</p>
+                  </div>
+                  <span class="addon__price ml-auto font-(family-name:--ff-sans) font-normal text-(--purple-2)">+$<span>2</span>/mo</span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </section>
+        <!-- Step 3 end -->
+
+        <!-- Step 4 start -->
+        <section id="step-4" class="form-step md:min-h-95 lg:min-h-115 transition duration-300" data-index="4" hidden>
+          <div>
+            <div>
+              <h2 class="font-(family-name:--ff-sans) font-bold text-2xl text-(--blue-5)">Finishing up</h2>
+              <p class="font-(family-name:--ff-sans) font-normal text-base text-(--grey) py-3.5 md:pbe-9">Double-check everything looks OK before confirming.</p>
+            </div>
+            <div>
+              <!-- Dynamically add subscription and add-on selections here -->
+              <div>
+                <div id="order-summary" class="order-summary bg-(--blue-1) px-6 py-5">
+                  <div class="plans-summary border-be border-(--grey) pbe-5"></div>
+                  <div class="addons-summary pbs-5"></div>
+                </div>
+                <div class="order-total flex justify-between px-6 py-7.5">
+                  <p class="font-(family-name:--ff-sans) font-normal text-base text-(--grey)">Total (per <span>month</span>)</p>
+                  <span class="total font-(family-name:--ff-sans) font-bold text-lg text-(--purple-2)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Step 4 end -->
+
+        <!-- Step 5 start -->
+        <section id="step-5" class="thank-you flex flex-col items-center gap-6 px-.5 py-19.5 text-center md:min-h-95 lg:min-h-115" data-index="5" hidden>
+          <img src="./assets/images/icon-thank-you.svg" alt="">
+          <div>
+            <h2 class="font-(family-name:--ff-sans) font-bold text-2xl text-(--blue-5)">Thank you!</h2>
+            <p class="font-(family-name:--ff-sans) font-normal text-base text-(--grey) pbs-3.5">Thanks for confirming your subscription! We hope you have fun 
+              using our platform. If you ever need support, please feel free 
+              to email us at support@loremgaming.com.
+            </p>
+          </div>
+        </section>
+        <!-- Step 5 end -->
+
+        <div class="form-navigation bg-(--white) absolute left-0 bottom-0 md:relative flex w-full p-4 md:p-0">
+          <button id="prev-btn" class="btn font-(family-name:--ff-sans) font-bold text-base text-(--grey) hover:text-(--blue-5) cursor-pointer transition duration-300" type="button" hidden>Go Back</button>
+          <button id="next-btn" class="btn bg-(--blue-5) hover:opacity-85 block ms-auto px-4.25 py-2 place-content-center rounded-sm text-(--white) cursor-pointer transition duration-300" type="button">Next Step</button>
+        </div>
+      </form>
+
+      
+    </main>
+  </div>
+
+  <footer class="attribution absolute bottom-0 ml-auto w-full">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://x.com/dominion_onoja">Dominion</a>.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
