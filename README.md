@@ -47,8 +47,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-mobile-first-multi-step-form-using-tailwind-and-emailjs-Jz1bYabcuT](https://www.frontendmentor.io/solutions/responsive-mobile-first-multi-step-form-using-tailwind-and-emailjs-Jz1bYabcuT)
+- Live Site URL: [https://why-not-phoenix.github.io/multi-step-form/](https://why-not-phoenix.github.io/multi-step-form/)
 
 ## My process
 
